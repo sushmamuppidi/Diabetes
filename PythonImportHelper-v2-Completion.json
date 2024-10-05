@@ -1,0 +1,87 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "StandardScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "application",
+        "description": "application",
+        "peekOfCode": "def index():\n    return render_template('home.html')\n@app.route(\"/predictdata\",methods=['GET','POST'])\ndef predict_datapoint():\n    if request.method=='POST':\n        Pregnancies=int(request.form.get(\"Pregnancies\"))\n        Glucose=float(request.form.get('Glucose'))\n        BloodPressure=float(request.form.get('BloodPressure'))\n        SkinThickness=float(request.form.get('SkinThickness'))\n        Insulin=float(request.form.get('Insulin'))",
+        "detail": "application",
+        "documentation": {}
+    },
+    {
+        "label": "predict_datapoint",
+        "kind": 2,
+        "importPath": "application",
+        "description": "application",
+        "peekOfCode": "def predict_datapoint():\n    if request.method=='POST':\n        Pregnancies=int(request.form.get(\"Pregnancies\"))\n        Glucose=float(request.form.get('Glucose'))\n        BloodPressure=float(request.form.get('BloodPressure'))\n        SkinThickness=float(request.form.get('SkinThickness'))\n        Insulin=float(request.form.get('Insulin'))\n        BMI=float(request.form.get('BMI'))\n        DiabetesPedigreeFunction = float(request.form.get('DiabetesPedigreeFunction'))\n        Age=float(request.form.get('Age'))",
+        "detail": "application",
+        "documentation": {}
+    }
+]

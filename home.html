@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Diabetes <span><br>It is a silent disease. It's a silent killer, and it's not going to go away.</span></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a>About</a></li>
+            <li><a href="#login">Check Diabetes</a></li>
+            <li><a href="#Precautions">Precautions</a></li>
+            <li><a href="#consequences">Consequences</a></li>
+            <li><a href="https://www.who.int/news-room/fact-sheets/detail/diabetes">Want to Know more?</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>What is Diabetes?</h2>
+            <p>
+                Diabetes is a chronic disease that affects how your body processes glucose (sugar). There are different types of diabetes, including Type 1, Type 2, and gestational diabetes.
+            </p>
+        </section>
+
+        <section id="section2">
+            <h2>Causes and Symptoms</h2>
+            <p>
+                Diabetes can be caused by various factors, including genetics, obesity, and an unhealthy lifestyle. Common symptoms include frequent urination, increased thirst, and unexplained weight loss.
+            </p>
+        </section>
+
+        <section id="section3">
+            <h2>Prevention and Management</h2>
+            <p>
+                Preventing and managing diabetes involves maintaining a healthy diet, regular physical activity, and monitoring blood sugar levels. It's important to work with healthcare professionals to develop a personalized plan.
+            </p>
+        </section>
+    </div>
+
+    <div class="image-container" id="consequences">
+        <div class="row">
+            <div class="column">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.BB2kHKzWgpH3SXU744DAfwHaE7&pid=Api&P=0&h=180" alt="Image 1">
+            </div>
+            <div class="column">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.x2-kwxOUw7X6E_TsaZ2GcQHaE8&pid=Api&P=0&h=180" alt="Image 2">
+            </div>
+            <div class="column">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.tHF1AthXF24fbbCyu8ulBwHaD_&pid=Api&P=0&h=180" alt="Image 3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://tse4.mm.bing.net/th?id=OIP.75QT6n__3nJ7uvaWBXxrtAHaE8&pid=Api&P=0&h=180" alt="Image 4">
+            </div>
+            <div class="column">
+                <img src="https://tse1.mm.bing.net/th?id=OIP.RIvlSqWcltQIlGt1cFksPwHaE7&pid=Api&P=0&h=180" alt="Image 5">
+            </div>
+            <div class="column">
+                <img src="https://beyonddiabetesandweightloss.files.wordpress.com/2021/07/pexels-media-897817.jpeg?w=768&h=512" alt="Image 6">
+            </div>
+        </div>
+    </div>
+
+    <div class="login" id="login">
+        <h1>Diabetes Check Online</h1>
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <input type="text" name="Pregnancies" placeholder="Pregnancies" required="required" /><br>
+            <input type="text" name="Glucose" placeholder="Glucose" required="required" /><br>
+            <input type="text" name="BloodPressure" placeholder="BloodPressure" required="required" /><br>
+            <input type="text" name="SkinThickness" placeholder="SkinThickness" required="required" /><br>
+            <input type="text" name="Insulin" placeholder="Insulin" required="required" /><br>
+            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
+            <input type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigreeFunction" required="required" /><br>
+            <input type="text" name="Age" placeholder="Age" required="required" /><br>
+            <button type="submit">Predict</button>
+        </form>
+        <h2>
+            Your Result : {{results}}
+        </h2>
+    </div>
+
+    <div class="image-container">
+        <div class="row">
+            <div class="column">
+                <img src="https://i.ytimg.com/vi/tIZppe-RB0g/maxresdefault.jpg" alt="Image 1">
+            </div>
+            <div class="column">
+                <img src="https://images.pexels.com/photos/1117493/pexels-photo-1117493.jpeg?cs=srgb&dl=balance-beach-blond-hair-1117493.jpg&fm=jpg" alt="Image 2">
+            </div>
+            <div class="column">
+                <img src="https://tse2.mm.bing.net/th?id=OIP.rLE_0MBI2vwkXO-c-XYHlgHaEK&pid=Api&P=0&h=180" alt="Image 3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://docjournals.com/wp-content/uploads/2021/07/exercise-1024x683.jpeg" alt="Image 4">
+            </div>
+            <div class="column">
+                <img src="https://wallpapercave.com/wp/wp4057822.jpg" alt="Image 5">
+            </div>
+            <div class="column">
+                <img src="https://ak9.picdn.net/shutterstock/videos/2250469/thumb/1.jpg" alt="Image 6">
+            </div>
+        </div>
+    </div>
+
+    <section id="Precautions">
+      <h2>Precautions for Diabetes</h2>
+      <p>Managing diabetes involves taking some precautions to lead a healthier life. Here are some key precautions:</p>
+      <ul>
+          <li>Follow a balanced and healthy diet.</li>
+          <li>Engage in regular physical activity.</li>
+          <li>Monitor your blood sugar levels regularly.</li>
+          <li>Take medications as prescribed by your healthcare provider.</li>
+          <li>Avoid smoking and limit alcohol consumption.</li>
+          <li>Manage stress through relaxation techniques.</li>
+          <li>Regularly visit your healthcare provider for check-ups.</li>
+      </ul>
+  </section>
+
+  <div class="last">
+    <div class="copy">copyright @hello doc...!!</div>
+  </div>
+
+</body>
+<script>
+    // Get the value of {{results}}
+    var resultValue = "{{results}}";
+
+    // Check if the resultValue is not empty or undefined
+    if (resultValue && resultValue !== "undefined") {
+        alert("Result: " + resultValue);
+    }
+</script>
+</html>
